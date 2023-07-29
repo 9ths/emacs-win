@@ -5,6 +5,7 @@ Installation Guide
 
 假设你的机器上有 名为 *shynur* 的用户, 他将 Emacs 安装在 ``c:/Users/shynur/bin/`` 目录下.
 
+
 .. contents::
 
 
@@ -93,7 +94,7 @@ Byte-compile Emacs Lisp files
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 
 在 ``.emacs.d/modules/src/`` 下有名如 ``shynur-*.c`` 的 C 文件, 参见 `modules/src/shynur-hello.c <./modules/src/shynur-hello.c>`_ 中提示的编译指令.
-编译后会在 ``modules/`` 下生成动态链接库, 例如 ``modules/shynur-hello.dll`` (其中的模块函数演示了一个简单的柯里化概念, 可以编译下来玩玩).
+编译后会在 ``modules/`` 下生成动态链接库, 例如 ``modules/shynur-hello.dll`` (其中的模块函数演示了一个简化的柯里化概念, 可以编译下来玩玩).
 
 
 Test

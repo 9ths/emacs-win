@@ -1,5 +1,21 @@
 #+title: Shynur’s Emacs
 
+#+BEGIN_COMMENT
+Copyright 2023 谢骐
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+#+END_COMMENT
+
 (由于本 Org 文件使用了过多的特性及其组合, 故 GitHub 会在些许地方渲染不佳.
 请在 [[https://shynur.github.io/.emacs.d/pages/README.html]] 获得最佳阅读体验!)
 
@@ -133,6 +149,8 @@ See the [[file:./LICENSE.txt][LICENSE.txt]] file for license rights and limitati
 -----
 
 Copyright \copy 2023  [[https://github.com/shynur][谢骐]] <[[mailto:one.last.kiss@outlook.com][one.last.kiss@outlook.com]]>.
+I own the copyright to [[https://github.com/shynur/.emacs.d][this entire repository]];
+unless explicitly stated, all files here are included and licensed the same as [[file:./README.md][this file]].
 
 # Local Variables:
 # coding: utf-8-unix
