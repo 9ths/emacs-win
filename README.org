@@ -150,7 +150,7 @@ See the [[file:./LICENSE.txt][LICENSE.txt]] file for license rights and limitati
 
 Copyright \copy 2023  [[https://github.com/shynur][谢骐]] <[[mailto:one.last.kiss@outlook.com][one.last.kiss@outlook.com]]>.
 I own the copyright to [[https://github.com/shynur/.emacs.d][this entire repository]];
-unless explicitly stated, all files here are included and licensed the same as [[file:./README.md][this file]].
+unless explicitly stated, all files here are included and licensed the same as [[file:./README.org][this file]].
 
 # Local Variables:
 # coding: utf-8-unix
