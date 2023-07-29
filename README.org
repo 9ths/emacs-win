@@ -132,7 +132,7 @@ See the [[file:./LICENSE.txt][LICENSE.txt]] file for license rights and limitati
 
 -----
 
-Copyright \copy 2023 [[https://github.com/shynur][谢骐]] <[[mailto:one.last.kiss@outlook.com][one.last.kiss@outlook.com]]>.
+Copyright \copy 2023  [[https://github.com/shynur][谢骐]] <[[mailto:one.last.kiss@outlook.com][one.last.kiss@outlook.com]]>.
 
 # Local Variables:
 # coding: utf-8-unix
