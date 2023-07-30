@@ -2,6 +2,8 @@
 ;; 因为 Emacs 启动时会读取本文件, 将结果加到 ‘safe-local-variable-values’ 中, 当启用这些配置时, _无需确认_.
 
 ((auto-mode-alist . (;; 有些设置是多余的, 但出于 教学/参考 的目的, 保留下来.
+
+                     ;; 这些是 auto-save 之类的文件.
                      ("~\\'" . (ignore t))
                      ("#[[:alnum:]]*\\'" . (ignore t))
 
@@ -9,13 +11,15 @@
                      ("/[^/-][^/]*\\.el\\'" . emacs-lisp-mode)
                      ("/\\.dir-locals\\(?:-2\\)?\\.el\\'" . lisp-data-mode)
 
-                     ;; TODO#1: 我tm自己都看不懂了, 有空补一下注释.
+                     ;; shynur/TODO: 我tm自己都看不懂了, 有空补一下注释.
                      ("/[[:alnum:]]\\(?:[[:alnum:]_]*[[:alnum:]]\\)?\\(?:\\(?:-[[:alnum:]]\\(?:[[:alnum:]_]*[[:alnum:]]\\)?\\)+\\)?\\.md\\'"      . markdown-mode)
                      ("/[[:alnum:]]\\(?:[[:alnum:]_]*[[:alnum:]]\\)?\\(?:\\(?:-[[:alnum:]]\\(?:[[:alnum:]_]*[[:alnum:]]\\)?\\)+\\)?\\.textile\\'" . textile-mode)
 
                      ("/[^/-][^/]*\\.ya?ml\\'" . yaml-mode)
-                     ;("/etc/yas-snippets/[^/-][^/]*\\.yasnippet\\'" . snippet-mode)
-                     ("/\\.gitignore\\'" . gitignore-mode)))
+                     ("/etc/yas-snippets/[^/-][^/]*\\.yasnippet\\'" . snippet-mode)
+                     ("/\\.gitignore\\'" . gitignore-mode)
+                     ("/\\.gitmodules\\'" . gitconfig-mode)
+                     ))
 
  (nil . ((outline-minor-mode-cycle . t)
          (outline-minor-mode-prefix . [nil])

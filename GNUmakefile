@@ -7,7 +7,6 @@ SHELL = /bin/sh
 .PHONY: clean docs
 
 clean:
-	rm --force --recursive  ./.data/
 	rm --force              ./{.,etc,{,site-}lisp,scripts}/**/*.el[cn]
 	rm --force              {.,docs/pages}/*.{html,pdf,tex}  # 保留‘docs/index.html’和‘docs/pages/index.md’.
 	rm --force              ./modules/*.{so,dylib,dll}

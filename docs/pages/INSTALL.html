@@ -46,7 +46,7 @@ do I put my init file?</a>):</p>
 <p>执行如下命令:</p>
 <pre><code>PS C:\Users\shynur&gt; ./bin/emacs-VERSION/bin/runemacs.exe</code></pre>
 <p>等到 Emacs 空闲下来 (自己判断) 后, <strong>关闭</strong> 窗口.</p>
-<p>此时, 应该能看到类似 <code>.data/elpa/</code> 的路径,
+<p>此时, 应该能看到类似 <code>.appdata/elpa/</code> 的路径,
 该目录下是编译好的 package.</p>
 <h3 id="compile-configuration-files-optional">Compile configuration
 files (Optional)</h3>
@@ -66,7 +66,7 @@ href="./modules/src/shynur-hello.c">modules/src/shynur-hello.c</a>
 <h2 id="test">Test</h2>
 <h3 id="start-process">Start process</h3>
 <p>执行如下命令:</p>
-<pre><code>PS C:\Users\shynur&gt; ./bin/emacs-VERSION/bin/emacsclientw.exe --server-file=c:/Users/shynur/.emacs.d/.data/server-auth-dir/server-name.txt --alternate-editor=&quot;&quot; --create-frame</code></pre>
+<pre><code>PS C:\Users\shynur&gt; ./bin/emacs-VERSION/bin/emacsclientw.exe --server-file=c:/Users/shynur/.emacs.d/.appdata/server-auth-dir/server-name.txt --alternate-editor=&quot;&quot; --create-frame</code></pre>
 <p>此时 Emacs 首先在后台创建了一个 daemon (see <a
 href="./docs/Emacs-use_daemon.md">如何运行 Emacs 作为后台服务进程?</a>),
 然后 (耐心点) 会弹出一个窗口, 默认会打开 <code>init.el</code> 文件.</p>

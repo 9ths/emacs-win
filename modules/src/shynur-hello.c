@@ -35,8 +35,7 @@ emacs_value Fshynur_hello(emacs_env *env,
                                            (emacs_value[]){
                                                env->make_string(env, "%s", 2),
                                                args[0]}),
-                              printed_arg1,
-                              &arg1_printed_len);
+                              printed_arg1, &arg1_printed_len);
 
     char message[1000]; // 够大就行.
     sprintf(message,

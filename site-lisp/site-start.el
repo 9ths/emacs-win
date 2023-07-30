@@ -11,6 +11,12 @@
       ;; 夏令时 在中国好像已经废除了.
       calendar-daylight-time-zone-name "CDT")
 
+;; 通过某种方法 (e.g., NFS, Samba) 访问驻留在遵循不同的 EOL 约定
+;; 的系统上的文件系统时, 不应该加以转换.
+
+;; (add-untranslated-filesystem "Z:")
+;; (add-untranslated-filesystem "Z:\\foo")
+
 
 ;; Local Variables:
 ;; coding: utf-8-unix

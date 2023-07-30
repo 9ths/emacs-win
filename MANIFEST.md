@@ -9,6 +9,8 @@ early-init.el
   |
   |__ lisp/shynur-early-init.el
         |
+        |__ etc/shynur-custom.el
+        |
         |__ lisp/shynur-package.el
 
 site-lisp/site-start.el
@@ -16,8 +18,6 @@ site-lisp/site-start.el
 init.el
   |
   |__ lisp/shynur-init.el
-        |
-        |__ etc/shynur-custom.el
         |
         |__ lisp/shynur-elisp.el
         |
@@ -32,6 +32,8 @@ init.el
         |__ lisp/shynur-server.el
         |
         |__ lisp/shynur-cc.el
+        |
+        |__ lisp/shynur-kbd.el
         |
         |__ lisp/shynur-sh.el
         |

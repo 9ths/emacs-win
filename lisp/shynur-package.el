@@ -11,10 +11,9 @@
 
       ;; 相当于在 加载“init.el” 前 执行‘package-initialize’.
       ;; 这其实是 默认行为.
-      package-enable-at-startup t
+      package-enable-at-startup t)
 
-      package-user-dir (file-name-concat user-emacs-directory
-                                         ".data/" "elpa/"))
+(shynur/custom-appdata/ package-user-dir /)
 
 ;; Feature: ‘nsm’
 ;; 设置 mirror 时会询问是否连接, 此时 Emacs 的 GUI 窗口甚至还没弹出来.

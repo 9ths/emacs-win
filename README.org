@@ -74,7 +74,7 @@ limitations under the License.
 + ~yaml-mode~
 + ~yasnippet~
 
-安装完之后, 可能还需要分别 ~require~ 一下.
+如果已经安装了这些 package, 可能还需要在进入本仓库之前分别 ~require~ 一下.
 
 * 键位
 ** 键盘输入

@@ -24,10 +24,16 @@
   (push (file-name-concat user-emacs-directory
                           subdir) load-path))
 
-(setq gc-cons-threshold 100000000
-      gc-cons-percentage 0.36789)
-
-(startup-redirect-eln-cache ".data/eln-cache")
+(require 'shynur/custom
+         (file-name-concat user-emacs-directory
+                           "etc/shynur-custom.el"))
+
+(setq gc-cons-threshold (* 1048576 200)  ; 自上次 GC 以来分配超过该 字节数 则立刻执行 GC.
+      ;; 同上, 但是是以 heap 被分配的比例裁定.
+      ;; 若该值更小, 则服从‘gc-cons-threshold’.
+      gc-cons-percentage 0)
+
+(startup-redirect-eln-cache (shynur/custom-appdata/ shynur--startup-redirect-eln-cache /))
 (require 'shynur-package)  ; (find-file-other-window "./shynur-package.el")
 
 (provide 'shynur-early-init)

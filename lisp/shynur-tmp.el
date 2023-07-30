@@ -36,12 +36,21 @@
  '(highlight-nonselected-windows t
                                  nil ()
                                  "除了当前选中的window,还highlight非选中的window的active-region")
- `(,(shynur--intern&bind-tmp)(shynur/init-data/ 'transient-history-file ".el")
-   nil (transient))
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'transient-levels-file ".el")
-   nil (transient))
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'transient-values-file ".el")
-   nil (transient))
+ `(,(set 'shynur--tmp 'shynur--tmp) ,(progn
+                                       (shynur/custom-appdata/ transient-history-file el)
+                                       (shynur/custom-appdata/ transient-levels-file el)
+                                       (shynur/custom-appdata/ transient-values-file el)
+                                       (shynur/custom-appdata/ tramp-persistency-file-name el)
+                                       (shynur/custom-appdata/ tramp-auto-save-directory /)
+                                       (shynur/custom-appdata/ filesets-menu-cache-file el)
+                                       (shynur/custom-appdata/ auto-save-list-file-prefix /)
+                                       (shynur/custom-appdata/ bookmark-default-file el)
+                                       (shynur/custom-appdata/ url-cache-directory /)
+                                       (shynur/custom-appdata/ url-cookie-file)
+                                       (shynur/custom-appdata/ temporary-file-directory /)
+                                       (shynur/custom-appdata/ save-place-file el)
+                                       (shynur/custom-appdata/ eww-bookmarks-directory /)
+                                       ))
  '(case-replace t
                 nil (replace)
                 "文本替换时,大小写敏感")
@@ -172,20 +181,9 @@
                          nil (delsel)
                          "选中文本后输入字符,会先删除刚刚选择的文本,再插入输入的字符")
  '(enable-recursive-minibuffers t)
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'eww-bookmarks-directory "/")
-   nil (eww))
  '(extended-command-suggest-shorter t
                                     nil (simple)
                                     "通过不完整的函数名调用command时,在echo area中提示这个command的全名")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'savehist-file ".el")
-   nil (savehist)
-   "必须在打开‘savehist-mode’之前设置此变量,否则‘savehist-mode’将找不到该文件")
- '(savehist-mode t
-                 nil (savehist)
-                 "保存minibuffer的历史记录")
- '(savehist-autosave-interval nil
-                              nil (savehist)
-                              "每多少秒保存一次minibuffer的历史记录")
  '(minibuffer-allow-text-properties t
                                     nil ()
                                     "大部分情况下,保留从‘read-from-minibuffer’获取的文本的属性")
@@ -332,14 +330,11 @@
                                       "对buffer名字进行补全时,忽略大小写")
  '(read-extended-command-predicate #'command-completion-default-include-p
                                    nil (simple))
- '(read-file-name-completion-ignore-case read-file-name-completion-ignore-case
-                                         nil (minibuffer)
-                                         "对文件路径进行补全时,是否忽略大小写(系统相关的)")
+ '(read-file-name-completion-ignore-case t
+                                         nil (minibuffer))
  '(read-quoted-char-radix 16
                           nil (simple)
                           "“C-q”后接16进制")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'save-place-file ".el")
-   nil (saveplace))
  '(save-place-mode t
                    nil (saveplace)
                    "在session之间保存访问文件时的浏览位置")
@@ -364,7 +359,6 @@
  '(suggest-key-bindings most-positive-fixnum
                         nil (simple)
                         "_1_通过函数名调用command时,在minibuffer中提示这个command可能绑定的快捷键;_2_决定‘extended-command-suggest-shorter’的显示持续时间;_3_将前面这两个提示信息持续显示5秒;_4_使command候选词列表中,各函数名的后面显示该函数绑定的快捷键")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'temporary-file-directory "/"))
  '(text-quoting-style nil
                       nil ()
                       "渲染成对的单引号时,尽可能使用‘curve’这种样式,退而求此次地可以使用`grave'这种样式")
@@ -409,10 +403,6 @@
  '(uniquify-strip-common-suffix t
                                 nil (uniquify)
                                 "当‘uniquify-buffer-name-style’的设置涉及补全文件路径时,保留显示路径名之间相同的部分")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'url-cache-directory "/")
-   nil (url-cache))
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'url-cookie-file "")
-   nil (url-cookie))
  '(Info-mode-hook `(,@Info-mode-hook
                     ,(lambda ()
                        "单词之间换行"
@@ -427,12 +417,6 @@
  '(on-screen-delay 0.4
                    nil (on-screen)
                    "on-screen的提示持续时间")
- '(w32-mouse-button-tolerance w32-mouse-button-tolerance
-                              nil ()
-                              "如果鼠标的3个案件中有一个失灵了,可以在这么多毫秒内同时按下其余两个键,Emacs会将其识别为失灵的那个键")
- '(w32-swap-mouse-buttons nil
-                          nil ()
-                          "是否交换鼠标的中键和右键")
  '(global-highlight-parentheses-mode t
                                      nil (highlight-parentheses)
                                      "给内层括号换种颜色")
@@ -498,8 +482,6 @@
  '(debug-on-quit nil
                  nil ()
                  "按下“C-g”时是否要进入debugger")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'bookmark-default-file ".el")
-   nil (bookmark))
  '(bookmark-save-flag 1
                       nil (bookmark)
                       "每次保存bookmark时都会写进文件")
@@ -912,7 +894,6 @@
  '(auto-save-timeout 30
                      nil ()
                      "经过如此之多的秒数的idleness之后auto-save,还可能执行一次GC.(这是一条heuristic的建议,Emacs可以不遵循,e.g.,编辑大文件)")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'auto-save-list-file-prefix "/"))
  '(auto-save-no-message nil)
  '(delete-auto-save-files t
                           nil ()
@@ -935,12 +916,6 @@
  '(tramp-mode t
               nil (tramp)
               "若置nil,直接关闭remote-filename识别")
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'tramp-persistency-file-name ".el")
-   nil (tramp-cache))
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'tramp-auto-save-directory "/")
-   nil (tramp))
- `(,(shynur--intern&bind-tmp) (shynur/init-data/ 'filesets-menu-cache-file ".el")
-   nil (filesets))
  '(edebug-all-defs nil
                    nil (edebug)
                    "置t则颠倒[C-M-x]对前缀参数的处理")
@@ -1056,11 +1031,11 @@
 (put 'narrow-to-region 'disabled nil)
 
 ;;; Feature: ‘project’
-(shynur/init-data/ 'project-list-file ".el")
+(shynur/custom-appdata/ project-list-file el)
 (setq project-switch-commands #'project-find-file)  ; “C-x p p”选中项目后, 立刻执行指定的 command.
 
 ;;; Feature: ‘nsm’
-(shynur/init-data/ 'nsm-settings-file ".data")  ; 记录已知的安全 connection.
+(shynur/custom-appdata/ nsm-settings-file data)  ; 记录已知的安全 connection.
 
 ;;; Feature: ‘company’
 (setq company-idle-delay 0
@@ -1074,6 +1049,11 @@
       company-tooltip-limit 10)
 (setq company-clang-executable shynur/custom-clang-path)
 (global-company-mode)
+
+;;; Feature: ‘savehist’
+(shynur/custom-appdata/ savehist-file el)
+(setq savehist-autosave-interval nil)
+(savehist-mode)  ; 保存 minibuffer 的历史记录
 
 ;;; Feature: ‘dired’
 (keymap-global-unset "C-x C-j")    ; ‘dired-jump’
@@ -1094,9 +1074,13 @@
 (setq desktop-auto-save-timeout nil)  ; Idle 时不自动保存, 毕竟 session 结束时会自动保存.
 (setq desktop-restore-frames nil)
 ;; ‘desktop-files-not-to-save’: 默认不保存 Remote file.
-(setq desktop-path `(,(shynur/init-data/ 'desktop-dirname "/"))
-      desktop-base-file-name "desktop-base-file-name.el"
-      desktop-base-lock-name "desktop-base-lock-name.el")
+(shynur/custom-appdata/ desktop-dirname /)
+(shynur/custom-appdata/ desktop-base-file-name nil nil
+  ;; 基于‘desktop-dirname’.
+  "desktop-base-file-name.el")
+(shynur/custom-appdata/ desktop-base-lock-name nil nil
+  ;; 基于‘desktop-dirname’.
+  "desktop-base-lock-name.el")
 (setq desktop-save t)
 
 ;;; Feature: ‘minibuffer’
@@ -1108,7 +1092,7 @@
               #'self-insert-command)))
 
 ;;; Feature: ‘recentf’
-(shynur/init-data/ 'recentf-save-file ".el")
+(shynur/custom-appdata/ recentf-save-file el)
 (setq recentf-max-saved-items nil)
 (setq recentf-max-menu-items 30)
 (recentf-mode)
@@ -1134,6 +1118,20 @@
                           (shrink-window (1+ ivy-height))))
                       nil t)))
 
+;;; Feature: ‘ls-lisp’
+;; 排序:
+(setq ls-lisp-use-string-collate nil  ; 不知道为什么, 置 t 就不区分大小写了.
+      ls-lisp-ignore-case nil
+      ls-lisp-dirs-first t
+      ;; 该算法会使 文件名中的字母部分 相同的聚集在一起.
+      ls-lisp-UCA-like-collation t)
+(setq ls-lisp-verbosity '(uid)
+
+      ls-lisp-use-localized-time-format t  ; 使用下面指定的格式, 而非 OS 提供的.
+      ls-lisp-format-time-list '("%m/%d %k:%M"  ; 今年编辑的显示为 “07/01  6:42”.
+                                 "%m/%d %Y"))
+(setq ls-lisp-support-shell-wildcards t)
+
 ;;; Feature: ‘hanoi’
 (setq hanoi-use-faces nil)  ; 不要使用彩色动画, 因为看起来很鬼畜.
 
@@ -1143,7 +1141,7 @@
 ;;; Feature: ‘cus-edit’
 (setq custom-search-field nil)  ; 感觉不如‘customize-apropos’.
 (setq custom-buffer-done-kill nil)  ; 按“[Exit]”(GUI 下 该图标 位于 tool bar) 并不 kill buffer.
-(shynur/init-data/ 'custom-file ".el")  ; 该文件需要 手动‘load-file’, 所以 直接 设置 即可, 无后顾之忧.
+(shynur/custom-appdata/ custom-file el)  ; 该文件需要 手动‘load-file’, 所以 直接 设置 即可, 无后顾之忧.
 
 (keymap-global-unset "C-h g")
 (keymap-global-unset "C-h h")
@@ -1383,17 +1381,6 @@
                   (set-frame-parameter nil 'fullscreen nil)
                   (set-frame-position nil 220 130)
                   (set-frame-size nil 800 600 t)))))
-
-(letrec ((modify-keyboard-translation (lambda ()
-                                        "daemon-client运行在同一个机器上,只需要在一个client进程中执行‘keyboard-translate’,其余(以及后续)的client都能生效"
-                                        (keyboard-translate ?\[ ?\()
-                                        (keyboard-translate ?\] ?\))
-                                        (keyboard-translate ?\( ?\[)
-                                        (keyboard-translate ?\) ?\])
-                                        (remove-hook 'server-after-make-frame-hook
-                                                     modify-keyboard-translation))))
-  (add-hook 'server-after-make-frame-hook
-            modify-keyboard-translation))
 
 (provide 'shynur-tmp)
 

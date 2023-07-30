@@ -48,6 +48,8 @@ Customize
 编辑 ``etc/shynur-custom.el`` 文件进行本地化配置.
 (这应当不需要 Emacs Lisp 知识.)
 
+(假设你将该文件中的 变量 ``shynur/c-appdata/`` 的值设为 ``~/.emacs.d/.appdata/``.)
+
 Requisites
 ^^^^^^^^^^
 
@@ -80,7 +82,7 @@ Fetch Packages
 
 等到 Emacs 空闲下来 (自己判断) 后, **关闭** 窗口.
 
-此时, 应该能看到类似 ``.data/elpa/`` 的路径, 该目录下是编译好的 package.
+此时, 应该能看到类似 ``.appdata/elpa/`` 的路径, 该目录下是编译好的 package.
 
 Compile configuration files (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -105,7 +107,7 @@ Start process
 
 执行如下命令::
 
-    PS C:\Users\shynur> ./bin/emacs-VERSION/bin/emacsclientw.exe --server-file=c:/Users/shynur/.emacs.d/.data/server-auth-dir/server-name.txt --alternate-editor="" --create-frame
+    PS C:\Users\shynur> ./bin/emacs-VERSION/bin/emacsclientw.exe --server-file=c:/Users/shynur/.emacs.d/.appdata/server-auth-dir/server-name.txt --alternate-editor="" --create-frame
 
 此时 Emacs 首先在后台创建了一个 daemon (see `如何运行 Emacs 作为后台服务进程? <./docs/Emacs-use_daemon.md>`_),
 然后 (耐心点) 会弹出一个窗口, 默认会打开 ``init.el`` 文件.

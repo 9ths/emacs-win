@@ -7,8 +7,8 @@
 
 ;;; Code:
 
-(message "Emacs Lisp REPL (v%s, %s) [%s] on %s
-Type \"%s\" to exit."
+(message "Emacs Lisp (v%s, %s) [%s] on %s
+Type \"%s\" to exit."  ; shynur/TODO: Colorize?
          emacs-version
          (format-time-string "%b %e %Y, %T %z"
                              emacs-build-time)
@@ -16,7 +16,7 @@ Type \"%s\" to exit."
          system-type
          "(kill-emacs)")
 
-;; TODO#3:
+;; shynur/TODO:
 ;;      It is inconvenient to type the entire ‘(kill-emacs)’ to
 ;;   exit from REPL.  It would be nice to recognize character ‘^C’.
 
@@ -51,11 +51,11 @@ Type \"%s\" to exit."
 ;; Debugger 以 C 风格 显示 函数调用, 而不是 Lisp 风格.
 (setq debugger-stack-frame-as-list nil)
 
-;; TODO#1:
+;; shynur/TODO:
 ;;      If user simply type blank characters, REPL will exit together
 ;;   with annoying error messages.  That is silly.
 
-;; TODO#2:
+;; shynur/TODO:
 ;;      Anyway to show error messages and backtraces, WITHOUT REPL
 ;;   exiting?
 

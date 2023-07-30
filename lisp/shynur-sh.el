@@ -6,9 +6,9 @@
 
 ;;; Feature: ‘eshell’
 
-(shynur/init-data/ 'eshell-directory-name "/")
-(shynur/init-data/ 'eshell-history-file-name ".txt")
-(shynur/init-data/ 'eshell-last-dir-ring-file-name ".txt")
+(shynur/custom-appdata/ eshell-directory-name /)
+(shynur/custom-appdata/ eshell-history-file-name txt)
+(shynur/custom-appdata/ eshell-last-dir-ring-file-name txt)
 
 (add-hook 'eshell-mode-hook
           (lambda ()
