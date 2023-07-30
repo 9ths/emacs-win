@@ -82,7 +82,7 @@ Fetch Packages
 
 等到 Emacs 空闲下来 (自己判断) 后, **关闭** 窗口.
 
-此时, 应该能看到类似 ``.appdata/elpa/`` 的路径, 该目录下是编译好的 package.
+此时, 应该能看到类似 ``.appdata/package-user-directory/`` 的路径, 该目录下是编译好的 package.
 
 Compile configuration files (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
