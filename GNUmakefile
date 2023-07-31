@@ -8,10 +8,11 @@ SHELL = /bin/sh
 
 clean:
 	rm --force              ./{.,etc,{,site-}lisp,scripts}/**/*.el[cn]
-	rm --force              {.,docs/pages}/*.{html,pdf,tex}  # 保留‘docs/index.html’和‘docs/pages/index.md’.
+	rm --force              ./docs/pages/*
 	rm --force              ./modules/*.{so,dylib,dll}
 
 docs:
+	mkdir --parents  ./docs/pages/
 	pandoc --from=textile  --to=html -o docs/pages/CONTRIBUTING.html      .github/CONTRIBUTING.textile
 	pandoc --from=rst      --to=html -o docs/pages/INSTALL.html			  INSTALL.rst
 	pandoc --from=markdown --to=html -o docs/pages/MANIFEST.html		  MANIFEST.md

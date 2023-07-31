@@ -17,13 +17,13 @@ limitations under the License.
 #+END_COMMENT
 
 (由于本 Org 文件使用了过多的特性及其组合, 故 GitHub 会在些许地方渲染不佳.
-请在 [[https://shynur.github.io/.emacs.d/pages/README.html]] 获得最佳阅读体验!)
+请在 [[https://shynur.github.io/.emacs.d/docs/README.html]] 获得最佳阅读体验.)
 
 * Overview
 
 #+ATTR_HTML: :alt 如果你看到了这句话, 说明我没高兴上传图片, 或者你的网络环境有问题.
 #+ATTR_HTML: :width 900px
-[[https://raw.githubusercontent.com/shynur/shynur/main/Pictures/Emacs/latest.png]]
+[[https://raw.githubusercontent.com/shynur/.emacs.d/assets/demos/emacs.png]]
 
 🥰 这是我的 Emacs 个人配置方案, from scratch.
 
@@ -39,7 +39,7 @@ limitations under the License.
 
 #+ATTR_HTML: :alt 如果你看到了这句话, 说明我没高兴上传 GIF, 或者你的网络环境有问题.
 #+ATTR_HTML: :width 400px
-[[https://raw.githubusercontent.com/shynur/shynur/main/Pictures/Emacs/latest.gif]]
+[[https://raw.githubusercontent.com/shynur/.emacs.d/assets/demos/emacs.gif]]
 
 * Prerequisites
 
@@ -99,7 +99,7 @@ Latest release, using *GUI*, run as *daemon-clients* on same machine ([[file:./d
 
 + MS-Windows: =x86_64-w64-mingw32=
 
-考虑到新手从零开始按照本配置初始化 Emacs 时, 可能会遇到各种意想不到的问题, 所以可以直接[[https://github.com/shynur/misc/tree/main/tmp/shynur-emacs-directory/][从这里找到自己需要的目录的打包文件, 并整个下载下来]] (可能会用分卷压缩), 以替换掉原本的 =~/.emacs.d/= 目录.
+考虑到新手从零开始按照本配置初始化 Emacs 时, 可能会遇到各种意想不到的问题, 所以可以直接[[https://github.com/shynur/.emacs.d/tree/assets/releases/][从这里找到自己需要的目录的打包文件, 并整个下载下来]] (可能会用分卷压缩), 以替换掉原本的 =~/.emacs.d/= 目录.
 
 ** Install
 
@@ -141,8 +141,7 @@ Latest release, using *GUI*, run as *daemon-clients* on same machine ([[file:./d
 * Repo Stats
 
 # See [[https://codetabs.com/count-loc/count-loc-online.html][Count LOC online]] hosted at [[https://github.com/jolav/codetabs]].
-+ [[https://api.codetabs.com/v1/loc/?github=shynur/.emacs.d&branch=main&ignored=docs/pages/][Languages Statistics]]
-  (排除 =docs/pages/= 目录)
++ [[https://api.codetabs.com/v1/loc/?github=shynur/.emacs.d&branch=main&ignored=][Languages Statistics]]
 
 * License
 
@@ -152,7 +151,7 @@ See the [[file:./LICENSE.txt][LICENSE.txt]] file for license rights and limitati
 
 Copyright \copy 2023  [[https://github.com/shynur][谢骐]] <[[mailto:one.last.kiss@outlook.com][one.last.kiss@outlook.com]]>.
 I own the copyright to [[https://github.com/shynur/.emacs.d][this entire repository]];
-unless explicitly stated, all files here are included and licensed the same as [[file:./README.org][this file]].
+unless explicitly stated, all files here are included and licensed the same as [[https://github.com/shynur/.emacs.d/blob/main/README.org?plain=1][this file]].
 
 # Local Variables:
 # coding: utf-8-unix
