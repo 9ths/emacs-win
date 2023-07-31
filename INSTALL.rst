@@ -54,7 +54,7 @@ Requisites
 ^^^^^^^^^^
 
 `README.org <./README.org#prerequisites>`_ 中列出了依赖项目,
-其中, 字体 是必须的.
+其中, 字体 是 **必须** 的.
 
 
 Compile
@@ -75,14 +75,11 @@ Fetch Packages
 
 从各类 ELPA 网站上获取 Emacs packages, 请确保你有正常的网络环境.
 
-.. 可能更好的做法是使用 ``--kill`` 命令行参数, 但目前还不清楚它的实际含义.
 执行如下命令::
 
-    PS C:\Users\shynur> ./bin/emacs-VERSION/bin/runemacs.exe
+    PS C:\Users\shynur> ./bin/emacs-VERSION/bin/emacs.exe --kill
 
-等到 Emacs 空闲下来 (自己判断) 后, **关闭** 窗口.
-
-此时, 应该能看到类似 ``.appdata/package-user-directory/`` 的路径, 该目录下是编译好的 package.
+等到 Emacs 正常退出后, 应该能看到类似 ``.appdata/package-user-directory/`` 的路径, 该目录下是编译好的 package.
 
 Compile configuration files (Optional)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^

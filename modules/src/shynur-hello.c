@@ -14,7 +14,7 @@ char *shynur_hello_get_current_time_string() {
 
     static char time_string[100]; // 够大就行.
     strftime(time_string, sizeof(time_string),
-             "%H:%M:%S, %m/%d %Y", localtime(&current_time));
+             "%H:%M:%S %m/%d %Y", localtime(&current_time));
 
     return time_string;
 }
@@ -40,7 +40,7 @@ emacs_value Fshynur_hello(emacs_env *env,
     char message[1000]; // 够大就行.
     sprintf(message,
             "Hello, %s!\n"
-            "I was made at %s.",
+            "I was made at: %s",
             printed_arg1, data);
 
     emacs_value return_value = env->make_unibyte_string(env, message, strlen(message));
@@ -77,7 +77,7 @@ int emacs_module_init(struct emacs_runtime *runtime) {
                                                   // or UTF-8 encoded non-ASCII string:
                                                   "打印并返回一个字符串.\n"
                                                   "“Hello, ARG!\n"
-                                                  " 我制造于 TIME.”\n"
+                                                  " 我制造于: TIME”\n"
                                                   "ARG 的打印表示 不能含有 NULL 字符 (可能连 non-ASCII 也不行)!",
                                                   shynur_hello_get_current_time_string());
     env->make_interactive(env, shynur_hello, env->make_string(env, "P", 1)),

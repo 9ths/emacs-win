@@ -91,17 +91,17 @@
                          (mode . indent-tabs)))
 
  ("etc/" . ((nil . (;; 其下的 Emacs Lisp 文件 几乎 只负责 定义 变量, 完全没必要编译.
-                    ;; 而且该目录也不在‘load-path’里, 所以那些 Emacs Lisp 是绝对路径指定的.
+                    ;; 而且该目录也不在‘load-path’里, 所以那些 Emacs Lisp 是_绝对路径_指定的.
                     (no-byte-compile . t)
                     (no-native-compile . t)))
             ("yas-snippets/" . ((auto-mode-alist . (("/etc/yas-snippets/[^/-][^/]*\\.yasnippet\\'" . snippet-mode)))))))
- ("lisp/" . ((nil . (;; 编写用于 解释执行 的代码更加轻松.
+ ("lisp/" . ((nil . (;; 编写用于 解释执行 的代码更加轻松, 但是会在未来的某一天重构成_可编译的_.
                      ;; ‘site-lisp/’中则尽量编写可编译的代码.
                      (no-byte-compile . t)
                      (no-native-compile . t)))))
  ("modules/src/" . ((nil . ((eval . (funcall shynur--read-only-when-filename-match "emacs-module"))  ; 这玩意有 GPL 污染, 切割!
 
-                            (tags-file-name . "TAGS.txt")
+                            (tags-file-name . "ETAGS.txt")
                             (eval . (when (buffer-file-name)  ; 正在访问文件, 而不是‘dired’之类的 buffer.
                                       (let ((default-directory (file-name-concat user-emacs-directory
                                                                                  "modules/src/")))

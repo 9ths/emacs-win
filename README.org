@@ -21,7 +21,7 @@ limitations under the License.
 
 * Overview
 
-#+ATTR_HTML: :alt 如果你看到了这句话, 说明我没高兴上传 图片, 或者你的网络环境有问题.
+#+ATTR_HTML: :alt 如果你看到了这句话, 说明我没高兴上传图片, 或者你的网络环境有问题.
 #+ATTR_HTML: :width 900px
 [[https://raw.githubusercontent.com/shynur/shynur/main/Pictures/Emacs/latest.png]]
 
